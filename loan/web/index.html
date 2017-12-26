@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+	<meta name ="viewport" content ="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="keywords" content="奇点资讯官方网站,奇点资讯,奇点资讯官网"/>
+	<title>源：用机器智能增强商业应用</title>
+	<script src="three-learn1/js/three.js"></script>
+	<script src="three-learn1/js/MTLLoader.js"></script>
+	<script src="three-learn1/js/OBJLoader.js"></script>
+	<script src="three-learn1/js/OrbitControls.js"></script>
+	<script src="three-learn1/js/CanvasRenderer.js"></script>
+	<link rel="stylesheet" href="three-learn1/css/index.css"/>
+	<script src="three-learn1/js/jquery-2.1.4.min.js"></script>
+	<script src="three-learn1/js/index.js"></script>
+	<style type="text/css">
+		body {
+		  margin: 0;
+		  /*font:normal 75% Arial, Helvetica, sans-serif;*/
+		}
+
+		canvas {
+		  display: block;
+		  vertical-align: bottom;
+		}
+		.aa {
+		  position: relative;
+		  width: 100%;
+		  height: 200px;
+		  background-color: #121316;
+		  background-image: url("");
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  background-position: 50% 50%;
+		  /*z-index: 100*/
+		}
+		#brain{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			z-index: 110;
+			width:auto;
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="page-one page">
+		<div id="brain"></div>
+		<div class="particles" style='overflow:hidden'>
+		<!--<div id="particles" class="aa"></div>-->
+			<!--<div id="particles-js1" class="aa"></div>-->
+			<!--<div id="particles-js2" class="aa"></div>-->
+			<!--<div id="particles-js3" class="aa"></div>-->
+		</div>
+		<div class="page-one-nav">
+			<img src="three-learn1/img/topIcon.png">
+			<span class="span-serve"><a href="https://github.com/SourceCore/sdk" style='border-bottom:0px'>SDK</a></span>
+			<span class="span-serve "><a href="#serve" class='marginRight'>核心服务</a></span>
+			<span class="span-first "><a href="javascript:;" class='marginRight'>首页</a></span>
+		</div>
+		<div class="present">
+			<span class="present-big">最智能的新媒体技术和解决方案提供商</span>
+			<span class="present-small">覆盖<span class="fonts">2</span>亿终端用户 400<span class="fonts">W</span>日活跃</span>
+		</div>
+		<div class="scroll">
+			<span class="scroll-word">SCROLL</span>
+			<div>
+				<img src="three-learn1/img/downicon.png">
+			</div>
+
+		</div>
+	</div>
+	<div class="page-two page" id="serve">
+		<div class="hexinfuwu">核心服务</div>
+		<div class="word-three">
+			<div class="word-one">
+				<div class="word-img">
+					<img src="three-learn1/img/source.png">
+				</div>
+				<span class="word-title">人工智能推荐引擎「深源」</span>
+				<div class="word-word">深源精准识别用户兴趣喜好，深度语义分析理解资讯、新闻根据用户的地理位置、时间波段等进行场景化推荐</div>
+			</div>
+			<div class="word-one">
+				<div class="word-img">
+					<img src="three-learn1/img/yuansheng.png">
+				</div>
+				<span class="word-title">原生嵌入国内一线产品</span>
+				<div class="word-word">深源已嵌入奇点资讯、⾼速浏览器、<span class="fonts">91</span>天气、<span class="fonts">91</span>黄历、全民助手-<span class="fonts">pc</span>⼿游客户端、应用汇等产品，覆盖<span class="fonts">2</span>亿用户</div>
+			</div>
+			<div class="word-one">
+				<div class="word-img">
+					<img src="three-learn1/img/bazhuayu.png">
+				</div>
+				<span class="word-title">八爪云自媒体平台</span>
+				<div class="word-word">八爪云自媒体平台为话题自定义追踪、微信公众号等自媒体平台提供接入服务，方便快捷的管理各类内容</div>
+			</div>
+		</div>
+		<div class="hexinfuwu">合作案例</div>
+		<div class="anliBox">
+			<div class="anli">
+				<img src="three-learn1/img/qidianlogo.png">
+				<span>奇点资讯</span>
+			</div>
+			<div class="anli">
+				<img src="three-learn1/img/gaosuLogo.png">
+				<span>高速浏览器</span>
+			</div>
+			<div class="anli">
+				<img src="three-learn1/img/yingyonghuiLogo.png">
+				<span>应用汇</span>
+			</div>
+			<div class="anli">
+				<img src="three-learn1/img/quanmingLogo.png">
+				<span>全民助手</span>
+			</div>
+			<div class="anli">
+				<img src="three-learn1/img/tianqiLogo.png">
+				<span>91天气</span>
+			</div>
+			<div class="anli">
+				<img src="three-learn1/img/huangliLogo.png">
+				<span>91黄历</span>
+			</div>
+		</div>
+	</div>
+    <div class="page-three">
+		<div class="footer-box">
+			<img src="three-learn1/img/footer-logo.png">
+			<p class="p1">公司总部 | 地址：上海徐家汇桂平路391号新国际商务中心B座2401室 | 邮编：200030 | 电话：021-6215 2028</p>
+			<p class="p2">北京研发中心 | 地址：北京市西城区西绒线胡同51号 | 邮编：100010 | 电话：010-84477818</p>
+			<p class="p3">Copyright© 2015-2016 G24lab.</p>
+		</div>
+	</div>
+</body>
+<script src="three-learn1/js/particles-base.js"></script>
+<script src="three-learn1/js/particles.js"></script>
+	<script>
+		var size = {};
+		size.width = window.innerWidth*0.23;
+		size.height = window.innerHeight*0.41;
+		var scene = new THREE.Scene();
+		var camera = new THREE.PerspectiveCamera(80,size.width/size.height,1,2000);
+		camera.position.set(0,40,200);
+		camera.lookAt(scene.position);
+		var sphere = new THREE.SphereGeometry( 4, 16, 8)
+		var light1 = new THREE.PointLight(0xfd76ff,1,200)
+		var light2 = new THREE.PointLight(0x0040ff,1,200)
+		var light3 = new THREE.PointLight(0x80ff80,1,200)
+		var light5 = new THREE.PointLight(0xffda00,1,200)
+		// light1.add( new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0xff0040 } ) ) );
+		scene.add(light1);
+		// light2.add( new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0x0040ff } ) ) );
+		scene.add(light2);
+		// light3.add( new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0x80ff80 } ) ) );
+		scene.add(light3);
+		// light5.add( new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0xffda00 } ) ) );
+		scene.add(light5);
+
+		//环境光
+		var light4 = new THREE.AmbientLight(0x333333)
+		scene.add(light4)
+
+		var geometry = new THREE.BoxGeometry(100,100,100)
+		var meterial = new THREE.MeshLambertMaterial({color:0xff0000})
+		var mesh = new THREE.Mesh(geometry,meterial)
+		// scene.add(mesh)
+
+		//加载OBJ
+		var loader = new THREE.MTLLoader()
+		loader.load("three-learn1/brain.mtl",function(brain){
+			brain.preload();
+			var objLoader = new THREE.OBJLoader();
+			objLoader.setMaterials( brain );
+			objLoader.load( 'three-learn1/brain.obj', function ( object ) {
+				object.scale.set(1,1,1);
+				object.position.y = 100;
+				object.position.x = -2100;
+				object.position.z = 278;
+				scene.add( object );
+			} );
+		})
+		var renderer = new THREE.WebGLRenderer({ antialias: true,alpha:true });
+		renderer.setSize(size.width,size.height)
+		var brain = document.getElementById("brain")
+		brain.appendChild(renderer.domElement)
+		animate()
+		function animate() {
+			requestAnimationFrame( animate );
+			render();
+		}
+		function render(){
+			var time = new Date()*0.001;
+			light1.position.x = Math.sin( time * 0.7 ) * 160;
+			light1.position.y = Math.cos( time * 0.3 ) * 100;
+			light1.position.z = Math.cos( time * 0.5 ) * 60;
+
+			light2.position.x = Math.cos( time * 0.3 ) * 160;
+			light2.position.y = Math.sin( time * 0.7 ) * 100;
+			light2.position.z = Math.sin( time * 0.5 ) * 60;
+
+			light3.position.x = Math.sin( -time * 0.7 ) * 160;
+			light3.position.y = Math.cos( -time * 0.3 ) * 100;
+			light3.position.z = Math.sin( -time * 0.5 ) * 60;
+
+			light5.position.x = Math.sin( -time * 0.3 ) * 160;
+			light5.position.y = -Math.cos( time * 0.7 ) * 100;
+			light5.position.z = Math.sin( -time * 0.5 ) * 60;
+
+			renderer.render(scene,camera)
+		}
+	</script>
+</html>

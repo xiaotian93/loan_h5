@@ -1,0 +1,195 @@
+
+@font-face {
+    font-family: MissYuan;
+    src:url('../font/MissYuan.otf');
+}
+*{
+    padding: 0;margin:0;list-style: none;font-family: MissYuan;
+}
+a{
+    text-decoration: none;
+}
+.fonts{
+    font-family: Arial;
+}
+.marginRight{
+    margin-right:5%;
+}
+.page-one-nav{
+    width:62.5%;height:auto;position: absolute;top:38px;left:50%;margin-left:-31.25%;z-index: 101;overflow: hidden;
+}
+.page-one-nav>img{
+    display: block;width:13%;float: left;
+}
+.span-serve>a{
+    display: inline-block;font-size: 16px;color:rgba(255,255,255,0.7);float: right;margin-top:6px
+}
+.span-first>a{
+    display: inline-block;font-size: 16px;color:rgba(255,255,255,1);float: right;margin-top:6px;
+}
+.present{
+    width:100%;height:auto;position: absolute;top:60%;
+}
+.present-big{
+    display: inline-block;width:100%;font-size: 34px;color: #fff;text-align: center;
+}
+.present-small{
+    font-size: 22px;color: #7c7c7c;text-align: center;margin-top:32px;display: inline-block;width: 100%;font-family: '黑体';
+}
+.scroll{
+width: 100%;height:auto;position: absolute;bottom: 30px;font-family: '黑体'
+}
+.scroll-word{
+    width: 100%;font-size: 11px;color:#dcdcdc;text-align: center;display: inline-block;
+}
+.scroll>div{
+    width: 0.7%;height: auto;margin:10px auto 0 auto;
+}
+.scroll>div>img{
+    width: 100%;
+}
+.hexinfuwu{
+    width: 62.5%;height: auto;padding:20px 0;font-size: 30px;color: #121315;text-align: center;margin:90px auto 0 auto;border-bottom: 1px solid #dcdedf;
+}
+.word-three{
+    width:62.5%;height:auto;overflow: hidden;margin:76px auto 50px auto;
+}
+.word-one{
+    width:33%;height: auto;float: left;
+}
+.word-img{
+    width: 90%;height:auto;
+}
+.word-img>img{
+    width: 30%;display: block;margin: 0 auto;
+}
+.word-title{
+    width: 90%;height: auto;font-size: 20px;color: #333;text-align: center;margin-top:24px;display: block;
+}
+.word-word{
+    width: 90%;height: auto;font-size: 14px;color: #666;line-height: 20px;margin-top:24px;font-family: '黑体';
+}
+.anliBox{
+    width: 62.5%;height: auto;overflow: hidden;margin: 76px auto 110px auto;
+}
+.anli{
+    width: 10%;height:auto;
+    float: left;margin-left: 8%;
+}
+.anli:first-child{
+    margin-left: 0;
+}
+.anli>img{
+    width: 80%;
+}
+.anli span{
+    width: 80%;display: block;font-size: 14px;color: #666;font-family: '黑体';text-align: center;line-height: 30px;
+}
+.page-three{
+    width: 100%;height: auto;padding: 40px 0;background: #ebebeb;
+}
+.footer-box{
+    width: 62.5%;height:auto;margin: 0 auto;
+}
+.footer-box>img{
+    width: 13.33%;display: block;
+}
+.footer-box p{
+    font-size: 12px;color: #999;font-family: '黑体';
+}
+.p1{
+    margin-top:32px;
+}
+.p2{
+    margin-top:25px;
+}
+.p3{
+    margin-top:22px;
+}
+@media screen and (max-width: 992px){
+    .page-one-nav{
+        width:calc(100% - 80px);padding: 30px 40px;top:0px;left: 0px;margin-left: 0px;
+    }
+    .page-one-nav>img{
+        width: 25%;margin-top:5px;
+    }
+    .scroll{bottom: 20px}
+    .span-serve>a{
+        font-size: 14px;margin-top:0px
+    }
+    .span-first>a{
+        font-size: 14px;margin-right: 6.13%;padding-bottom: 5px;border-bottom: 1px solid#fff;margin-top:0px
+    }
+    #brain{
+        width: 100% !important;top:25%!important;
+    }
+    #brain>img{
+        width: 38%;display: block;margin: 0 auto;
+    }
+    .present{top:55%}
+    .present-big{
+        font-size: 18px;
+    }
+    .present-small{
+        font-size: 12px;margin-top:19px
+    }
+    .scroll>div{
+        width: 2%;margin-top:5px
+    }
+    .hexinfuwu{
+        width: 20%;font-size: 16px;padding: 10px 0;margin:14px 0 0 23px
+    }
+    .page-two{
+        background: #fbfbfb;overflow: hidden;
+    }
+    .word-three{
+        width: 100%;margin:50px auto 20px auto;
+    }
+    .word-one{
+        width: 100%;margin-bottom: 50px;
+    }
+    .word-title{
+        margin-top:20px ;font-size: 16px;width: 100%;
+    }
+    .word-word{
+width: 70%;margin: 11px auto 0 auto;
+    }
+    .word-img{width: 100%}
+    .word-img>img{width: 20%}
+    .anliBox{
+     width: 100%;margin:0px auto 60px auto
+    }
+    .anli{
+        width: 21%;margin-left: 11.5%;margin-top:50px
+    }
+    .anli:first-child{
+        margin-left: 11.5%;
+    }
+    .anli>img{
+        width: 90%;
+    }
+    .anli span{
+     width: 90%;margin-top:5px;text-align: center;font-size: 12px;
+    }
+    .footer-box{
+     width: calc(100% - 50px);
+    }
+    .page-three{
+        padding: 30px 0 42px 0;
+    }
+    .footer-box>img{
+        width: 21%;
+    }
+    .p1{
+        margin-top:31px;
+    }
+    .p2{
+        margin-top:20px;
+    }
+    .p3{
+        margin-top:20px;
+    }
+    .footer-box p{
+        line-height: 20px;
+    }
+}

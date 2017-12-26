@@ -1,0 +1,68 @@
+*{
+    margin:0;padding:0;list-style: none;
+}
+header{
+    max-width:990px;height:82px;margin:0 auto;width:80%
+}
+header img{
+    height:60px;
+    display: inline-block;
+    margin:11px 0
+}
+.banner{
+    width:auto;height:auto;background: url(../img/banner_bg.png) no-repeat;background-size: 100% 100%;
+}
+.bannerBox{
+    max-width:990px;margin:0 auto;width:80%;position: relative;
+}
+.banner_bg{
+    display: inline-block;width: 100%;
+}
+.jigou{
+    max-width:990px;height:auto;margin:0 auto;width:80%;
+}
+.jigou img{
+    width: 100%;margin-bottom: -3px;
+}
+.download{
+    width:49.6%;margin:0 auto;background: #fff;
+}
+.download img{
+    width:94%;margin:3%;
+}
+.text_load{
+    width:100%;margin-top:9.4%;
+}
+.erweima{
+    width:40%;height:auto;position: absolute;top:39.1%;right:1.2%;
+}
+.fanweiBox{
+    max-width:100%;height: auto;background: #f6f6f6;width:100%;
+}
+footer{
+    width:100%;height:392px;
+    background: #f6f6f6;
+}
+.foot{
+    max-width:990px;height:100%;margin:0 auto;display: flex;align-items: center;display: -webkit-flex;-webkit-align-items: center;width:80%
+}
+.foot img{
+    width:200px;margin-left: 104px;
+}
+.footLine{
+    width:2px;height:228px;background: #d2d2d2;margin-left: 84px;
+}
+.footWord{
+    margin-left: 120px;color: #808080;
+}
+@media screen and (min-width: 1900px){
+    .jigou{
+        max-width:1200px;height:auto
+    }
+    .foot{
+        max-width:1200px
+    }
+    header,.bannerBox{
+        max-width:1200px
+    }
+}

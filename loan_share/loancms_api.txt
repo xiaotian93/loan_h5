@@ -1,0 +1,9 @@
+1./v2/cms/product/flow/list   流程列表接口
+2./v2/cms/product/uploadFlow   流程图上传接口 参数 file
+3.添加接口新增参数：
+    1.deadlineType int 放贷期限类型 1:日，2:月
+    2.successCount int 成功人数
+    3.accountDeadlines int数组，传参方式和/v2/cms/product/list/data/add中的productIds方式一样
+    4.flowImageIds int数组，参数是流程图的id数组，传参方式和上面一样
+    5.condition 申请条件
+    6.material 准备材料
