@@ -1,0 +1,27 @@
+.icon{
+	width: 33%;
+	height: 211px;
+	text-align:center;
+	font-size: 28px;
+	color: #2897fb!important;
+	font-weight: 200;
+	padding-top: 63px;
+	border-bottom: 3px solid #f5f5f5;
+	float: right;
+	display: block;
+}
+.icon.mid{
+	border-left: 3px solid #f5f5f5;
+	border-right: 3px solid #f5f5f5;
+	margin: auto;
+	float: none;
+}
+.icon:first-child{
+	float: left;
+}
+.icon img{
+	width: 88px;
+	height: 88px;
+	margin: 0px auto 26px auto;
+	display: block;
+}

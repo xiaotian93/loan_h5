@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="new-input gerenShui">
+	<div class="field-wrap wrap-clear">
+		<label>计算方式：</label>
+		<div class="field">
+			<span class="item radioA">
+				<input type="radio" name="calType" value="1" checked="">税前月薪计算税后月薪
+			</span>　
+			<span class="item radioB">
+				<input type="radio" name="calType" value="2">税后月薪反推税前月薪
+			</span>
+		</div>
+	</div>
+	<div class="field-wrap">
+		<label>城市：</label>
+		<div class="field">
+			<div class="ui-select selectCity" data-ui="ui-select" style="position: static;">
+				<div class="select-valueBar select-valueBar-hover">
+					<input name="cityname" type="hidden" value="北京">
+					<div class="select-value"><span class="select-text">北京</span></div>
+					<span class="select-down"><i class="ui-icon">下</i></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="field-wrap">
+		<label>月薪：</label>
+		<div class="field">
+			<span class="ui-text">
+				<input name="salary" data-format="numbers" type="text" placeholder="0.00" check-status="yes">
+				<span class="tail">元</span>
+			</span>
+			<span class="input-tip"><span class="inner">适用于工资薪金所得</span></span>
+		</div>
+	</div>
+	<div class="field-wrap">
+		<label class="more-icon">更多选项</label>
+		<div class="field">
+			<div class="hr"></div>
+		</div>
+	</div>
+	<div class="more-inputs">
+		<div class="field-wrap">
+			<label>社保基数：</label>
+			<div class="field">
+				<span class="ui-text item">
+					<input data-format="number" name="shebaoNum" type="text" disabled="">
+					<span class="tail">元</span>
+				</span>
+				<span class="item"><input class="flag" name="shebaoFlag" type="checkbox" value="1">可修改</span>
+			</div>
+		</div>
+		<div class="field-wrap">
+			<label>住房公积金基数：</label>
+			<div class="field">
+				<span class="ui-text item">
+					<input data-format="number" name="found" type="text" disabled="">
+					<span class="tail">元</span>
+				</span>
+				<span class="item"><input class="flag" name="foundFlag" type="checkbox" value="1">可修改</span>
+			</div>
+		</div>
+		<div class="field-wrap">
+			<label>　</label>
+			<div class="field">
+				<input name="isFound" type="checkbox" checked="" value="1">&nbsp;我有基本住房公积金　<span class="doc-color-micro">俗称"公积金"或者"一金"，由个人和单位共同缴纳</span>
+			</div>
+		</div>
+		<div class="field-wrap">
+			<label>　</label>
+			<div class="field">
+				<span class="item wrap-left">
+					<input name="buchongFoundRateFlag" type="checkbox" checked="">&nbsp;还有补充住房公积金　<span class="doc-color-micro">其中，单位与个人缴纳的比例</span>
+	            </span>
+	            <div class="item wrap-left">
+		            <div class="ui-select wrap-left short" data-ui="ui-select" style="width: 80px; position: static;">
+		                <div class="select-valueBar" style="width: auto;">
+		                    <input name="buchongFoundRate" type="hidden" value="0">
+		                    <div class="select-value">
+		                        <input class="select-text" style="width:1em;" maxlength="4" value="0">
+				                <span class="select-tail">%</span>
+		                    </div>
+		                    <span class="select-down"><i class="ui-icon">下</i></span>
+		                </div>
+		                <ul class="select-list buchong" style="display: none;">
+		                    <li class="select-item" data-value="0">0%</li>
+		                    <li class="select-item" data-value="1">1%</li>
+		                    <li class="select-item " data-value="2">2%</li>
+		                    <li class="select-item" data-value="3">3%</li>
+		                    <li class="select-item" data-value="4">4%</li>
+		                    <li class="select-item" data-value="5">5%</li>
+		                    <li class="select-item" data-value="6">6%</li>
+		                    <li class="select-item" data-value="7">7%</li>
+		                    <li class="select-item" data-value="8">8%</li>
+		                </ul>
+		            </div>
+	            </div>
+            </div>
+		</div>
+	</div>
+	<div class="field-wrap">
+		<label>　</label>
+		<div class="field">
+			<button class="doCalu btn cal-btn" did="1">计 算</button><a class="btn reset-btn" href="/calculator/gerensuodeshui.html">重 置</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

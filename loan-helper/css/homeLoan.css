@@ -1,0 +1,61 @@
+.bar{
+	display: flex;
+	display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    color: #a0c5fa;
+    padding: 0px 66px;
+    font-size: 28px;
+    background: #1b84ff;
+    background: -moz-linear-gradient(left,  #1b84ff 0%, #18a0ff 100%);
+    background: -webkit-gradient(linear, left left, left right, color-stop(0%,#1b84ff), color-stop(100%,#18a0ff));
+    background: -webkit-linear-gradient(left,  #1b84ff 0%,#18a0ff 100%);
+    background: -o-linear-gradient(left,  #1b84ff 0%,#18a0ff 100%);
+    background: -ms-linear-gradient(left,  #1b84ff 0%,#18a0ff 100%);
+    background: linear-gradient(to right,  #1b84ff 0%,#18a0ff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b84ff', endColorstr='#18a0ff',GradientType=0 );
+    height: 108px;
+    box-shadow: 0px 0px 20px -1px #1b84ff;
+}
+.bar span{
+	display: inline-block;
+	line-height: 100px;
+	padding: 0px 8px;
+	box-sizing: content-box;
+}
+.bar span:hover{
+	color: #fff;
+	border-bottom: 8px solid #fff;
+}
+.bar span.active{
+	color: #fff;
+	border-bottom: 8px solid #fff;
+}
+.forms{
+	font-size: 28px;
+	font-weight: 300;
+}
+.forms .item{
+	padding: 0px 30px;
+	border-bottom: 2px solid #f6f6f6;
+	line-height: 90px;
+}
+.forms .key{
+	display: block;
+	width: 150px;
+	float: left;
+}
+.forms .form{
+	padding-left: 150px;
+	text-align: right;
+}
+.form .name{
+	color: #afafaf;
+	display: inline-block;
+	width: 130px;
+	text-align: left;
+	margin-left: 20px;
+}
+.form .name.fst{
+	margin-right: 96px;
+}

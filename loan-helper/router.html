@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>房贷计算器</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,minimum-scale=0.5,maximum-scale=0.5,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/fangdai.css?t=123">
+    <script type="text/javascript">
+    if (!window['RCal']) {
+        window['RCal'] = {};
+    }
+    RCal.baseRate = [{
+            "term": [0, 12],
+            "rate": 4.35,
+            "text": "1\u5e74\u4ee5\u5185(\u542b1\u5e74)"
+        },
+        {
+            "term": [12, 60],
+            "rate": 4.75,
+            "text": "1\u5e74\u52305\u5e74(\u542b5\u5e74)"
+        },
+        {
+            "term": [60, 1000],
+            "rate": 4.9,
+            "text": "5\u5e74\u4ee5\u4e0a"
+        }
+    ];
+    RCal.baseRateGjj = [{ "term": [0, 60], "rate": 2.75, "text": "5\u5e74\u4ee5\u5185(\u542b5\u5e74)" }, { "term": [60, 1000], "rate": 3.25, "text": "5\u5e74\u4ee5\u4e0a" }];
+    RCal.baseRateCunkuan = [{ "term": 0, "rate": 0.35, "text": "\u6d3b\u671f" }, { "term": 3, "rate": 1.1, "text": "3\u4e2a\u6708\u5b9a\u671f" }, { "term": 6, "rate": 1.3, "text": "6\u4e2a\u6708\u5b9a\u671f" }, { "term": 12, "rate": 1.5, "text": "1\u5e74\u5b9a\u671f" }, { "term": 24, "rate": 2.1, "text": "2\u5e74\u5b9a\u671f" }, { "term": 36, "rate": 2.75, "text": "3\u5e74\u5b9a\u671f" }];
+    </script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="calculator.js"></script>
+    <script type="text/javascript" src="Combox.js"></script>
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script src="http://sdk.talkingdata.com/app/h5/v1?appid=06266C5B3EA34B40A4DB14BF39184B38"></script>
+    <title>房贷计算器</title>
+</head>
+
+<body>
+    <div class="bar">
+        <span data-code="fangdai">商业贷款</span>
+        <span data-code="gongjijin">公积金贷款</span>
+        <span data-code="zuhe">组合贷款</span>
+    </div>
+    <section id="content"></section>
+    <!-- 输入框弹窗 -->
+    <section class="frame-input"></section>
+</body>
+<script type="text/javascript" src="js/router.js"></script>
+
+</html>

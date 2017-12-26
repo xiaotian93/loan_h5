@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>贷款利率查询</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=0.5,maximum-scale=0.5,user-scalable=no;" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/loan_rate.css">
+    <script src="jquery.js"></script>
+    <script src="http://sdk.talkingdata.com/app/h5/v1?appid=06266C5B3EA34B40A4DB14BF39184B38"></script>
+</head>
+<body style="background: #f3f3f3">
+<div class="bar">
+    <span class="active">商业贷款利率</span>
+    <span>公积金贷款利率</span>
+</div>
+<div class="rate">
+    <div class="rateBoth table_show">
+        <div >
+            <table>
+                <thead>
+                <tr>
+                    <td></td>
+                    <td class="bolds">&le;1年</td>
+                    <td class="bolds">1-5年</td>
+                    <td class="bolds">&gt;5年</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th class="bolds">基准年利率</th>
+                    <th class="one">4.35%</th>
+                    <th class="of">4.75%</th>
+                    <th class="five">4.9%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">8.5折</th>
+                    <th class="one_85">3.6975%</th>
+                    <th class="of_85">4.0375%</th>
+                    <th class="five_85">4.165%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">8.8折</th>
+                    <th class="one_88">3.828%</th>
+                    <th class="of_88">4.18%</th>
+                    <th class="five_88">4.312%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">9.0折</th>
+                    <th class="one_90">3.915%</th>
+                    <th class="of_90">4.275%</th>
+                    <th class="five_90">4.41%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">9.5折</th>
+                    <th class="one_95">4.35%</th>
+                    <th class="of_95">4.75%</th>
+                    <th class="five_95">4.9%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">1.05倍</th>
+                    <th class="one_105">4.5675%</th>
+                    <th class="of_105">4.9875%</th>
+                    <th class="five_105">5.145%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">1.1倍</th>
+                    <th class="one_11">4.785%</th>
+                    <th class="of_11">5.225%</th>
+                    <th class="five_11">5.39%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">1.2倍</th>
+                    <th class="one_12">5.22%</th>
+                    <th class="of_12">5.7%</th>
+                    <th class="five_12">5.88%</th>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+        <div class="word">
+            <div>最新利率更新时间为2015年10月24日</div>
+            <div>以上为央行公布的贷款基准利率，房贷、车贷以此为基准上浮或下调。消费、经营贷款各银行利率差异很大。</div>
+        </div>
+    </div>
+    <div class="rateBoth">
+        <div >
+            <table>
+                <thead>
+                <tr>
+                    <td></td>
+                    <td class="bolds">&le;5年</td>
+                    <td class="bolds">&gt;5年</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th class="bolds">基准年利率</th>
+                    <th>2.75%</th>
+                    <th>4.9%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">8.5折</th>
+                    <th>2.3375%</th>
+                    <th>2.7625%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">8.8折</th>
+                    <th>2.42%</th>
+                    <th>2.86%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">9.0折</th>
+                    <th>2.475%</th>
+                    <th>2.925%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">9.5折</th>
+                    <th>2.6125%</th>
+                    <th>3.0875%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">1.05倍</th>
+                    <th>2.8875%</th>
+                    <th>3.4125%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">1.1倍</th>
+                    <th>3.025%</th>
+                    <th>3.575%</th>
+                </tr>
+                <tr>
+                    <th class="bolds">1.2倍</th>
+                    <th>3.3%</th>
+                    <th>3.9%</th>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+        <div class="word">
+            <div>最新利率更新时间为2015年10月24日</div>
+            <div>以上为央行公布的公积金贷款基准利率，公积金贷款只能用于房贷，各地会根据当地政策对利率进行上浮或下调。</div>
+        </div>
+    </div>
+</div>
+<script>
+    $(".bar span").each(function(i,obj){
+        $(obj).click(function(){
+            $(".bar span").each(function(i,obj){
+                $(obj).removeClass("active");
+                $($(".rate .rateBoth")[i]).removeClass("table_show");
+            });
+            $(this).addClass("active");
+            $($(".rate .rateBoth")[i]).addClass("table_show");
+        })
+    })
+    var one=parseFloat($(".one").html());
+    var of=parseFloat($(".of").html());
+    var five=parseFloat($(".five").html());
+    $(".one_85").html((one*0.85).toFixed(4)+"%");
+    $(".of_85").html((of*0.85).toFixed(4)+"%");
+    $(".five_85").html((five*0.85).toFixed(4)+"%");
+    $(".one_88").html((one*0.88).toFixed(4)+"%");
+    $(".of_88").html((of*0.88).toFixed(4)+"%");
+    $(".five_88").html((five*0.88).toFixed(4)+"%");
+    $(".one_90").html((one*0.9).toFixed(4)+"%");
+    $(".of_90").html((of*0.9).toFixed(4)+"%");
+    $(".five_90").html((five*0.9).toFixed(4)+"%");
+    $(".one_95").html((one*0.95).toFixed(4)+"%");
+    $(".of_95").html((of*0.95).toFixed(4)+"%");
+    $(".five_95").html((five*0.95).toFixed(4)+"%");
+    $(".one_105").html((one*1.05).toFixed(4)+"%");
+    $(".of_105").html((of*1.05).toFixed(4)+"%");
+    $(".five_105").html((five*1.05).toFixed(4)+"%");
+    $(".one_11").html((one*1.1).toFixed(4)+"%");
+    $(".of_11").html((of*1.1).toFixed(4)+"%");
+    $(".five_11").html((five*1.1).toFixed(4)+"%");
+    $(".one_12").html((one*1.2).toFixed(4)+"%");
+    $(".of_12").html((of*1.2).toFixed(4)+"%");
+    $(".five_12").html((five*1.2).toFixed(4)+"%");
+</script>
+</body>
+</html>

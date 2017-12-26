@@ -1,0 +1,202 @@
+    <table class="div2 forms">
+        <tbody>
+            <tr>
+                <td class="key">计算方式</td>
+                <td class="value">
+                    <input type="radio" name="gjj_type" id="gjj_type_1" value="1" data-value="checked" checked=""> 
+                    <label class="radio" for="gjj_type_1"></label>
+                    <label class="label2" for="gjj_type_1">按贷款额度算</label>
+                    <input type="radio" name="gjj_type" id="gjj_type_2" value="2"> 
+                    <label class="radio" for="gjj_type_2"></label>
+                    <label for="gjj_type_2">按面积算</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="key">还款方式</td>
+                <td class="value">
+                    <input type="radio" class="pay-type" name="pay-type" id="pay-type1" value="benxi" data-value="checked" checked="">
+                    <label class="radio" for="pay-type1"></label>
+                    <label class="label2" for="pay-type1">等额本息</label>
+                    <input type="radio" class="pay-type" name="pay-type" id="pay-type2" value="benjing"> 
+                    <label class="radio" for="pay-type2"></label>
+                    <label for="pay-type2">等额本金</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="div2 forms">
+        <tbody>
+            <tr class="div2_1">
+                <td class="key">贷款金额</td>
+                <td class="value">
+                    <div class="inpt-wrap">
+                        <input type="number" class="inpt" id="dkje_2">
+                        <span>万元</span>
+                    </div>
+                </td>
+            </tr>
+            <tr class="div2_2" style="display: none;">
+                <td class="key">平米单价</td>
+                <td class="value">
+                    <div class="inpt-wrap">
+                        <input type="number" class="inpt" id="pmdj" style="border: 1px solid rgb(214, 214, 214);">
+                        <span>元/平米</span>
+                    </div>
+                </td>
+            </tr>
+            <tr class="div2_2" style="display: none;">
+                <td class="key">面积</td>
+                <td class="value">
+                    <div class="inpt-wrap">
+                        <input type="number" class="inpt" id="mj" style="border: 1px solid rgb(214, 214, 214);">
+                        <span>平米</span>
+                    </div>
+                </td>
+            </tr>
+            <tr class="div2_2" style="display: none;">
+                <td class="key">购房性质</td>
+                <td  class="value">
+                    <input type="radio" name="gfxz" id="gfxz_1" value="1" data-value="checked" checked="">
+                    <label class="radio" for="gfxz_1"></label>
+                    <label for="gfxz_1">一套房</label>
+                    <input type="radio" name="gfxz" id="gfxz_2" value="2">
+                    <label class="radio" for="gfxz_2"></label>
+                    <label for="gfxz_2">二套房</label>
+                </td>
+            </tr>
+            <tr class="div2_2" style="display: none;">
+                <td class="key">首付</td>
+                <td class="value">
+                    <div id="sfbl_sel_2" class="sel">
+                        <input type="hidden" disabled name="sfbl_2" id="_combox_inp_sfbl_sel_2" value="3">
+                        <span id="_combox_inp_sfbl_sel_2_view" class="view">3</span>
+                        <span>成&gt;</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="key">贷款期限</td>
+                <td class="value" id="set-endTime">
+                    <div id="gjj_qixian_wrap" class="autocomplete_wrap" style="z-index: 900;">
+                        <div class="sb_value sb_input_wrap">
+                            <div class="sb_input">
+                                <input type="hidden" required="true" data-format="number" data-autocpt="autocomplete" autocomplete="off" data-target="#gjj_qixian_wrap" blur-valid="true" valid-data="positive|请输入贷款期限||maxvalue:36|贷款期限过高" cate="num" need="true" name="dkqx_2" value="5" disabled>
+                                <span class="view">5</span>
+                                <span class="sb_inp_suffix">年&gt;</span>
+                            </div>
+                            <div class="dropdownBtn" data-toggle="dropdown" data-target="#gjj_qixian_wrap"></div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="key">年利率</td>
+                <td class="value" id="set-rate">
+                    <span id="dklv_2_view" class="view">2.75</span>
+                    <span>%</span><span>&nbsp;&gt;</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="forms">
+        <tbody>
+            <tr>
+                <td class="key noborder">手动输入年利率</td>
+                <td class="value">
+                    <input type="number" class="inpt lilv_r" id="dklv_2" value="2.75">
+                    <span>&nbsp;%</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="value btn-td" colspan="2">
+                    <button class="btn cal-btn" did="2">开 始 计 算</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+<div class="title">
+    <section>
+        买房参考
+        <div></div>
+    </section>
+</div>
+    <table id="result">
+        <tbody>
+            <tr>
+                <td class="result active" id="res-benxi">
+                    <table class="tbl">
+                        <tbody>
+                            <tr>
+                                <td class="td1">贷款总额</td>
+                                <td class="td2"><var id="_debx_dkje">0</var> 元</td>
+                            </tr>
+                            <tr>
+                                <td class="td1">还款月数</td>
+                                <td class="td2"><var id="_debx_dkqx">0</var> 月</td>
+                            </tr>
+                            <tr height="50">
+                                <td class="td1">每月还款</td>
+                                <td class="td2"><em id="_debx_myhk">0</em> 元</td>
+                            </tr>
+                            <tr>
+                                <td class="td1">总支付利息</td>
+                                <td class="td2"><em id="_debx_zflx">0</em> 元</td>
+                            </tr>
+                            <tr>
+                                <td class="td1">本息合计</td>
+                                <td class="td2"><em id="_debx_hkze">0</em> 元</td>
+                            </tr>
+                        </tbody>
+                    </table>            
+                </td>
+                <td class="result" id="res-benjing">
+                    <table class="tbl">
+                        <tbody>
+                            <tr>
+                                <td class="td1">贷款总额</td>
+                                <td class="td2"><var id="_debj_dkje">0</var> 元</td>
+                            </tr>
+                            <tr>
+                                <td class="td1">还款月数</td>
+                                <td class="td2"><var id="_debj_dkqx">0</var> 月</td>
+                            </tr>
+                            <tr height="50" style="line-height: 40px;vertical-align: top;">
+                                <td class="td1">首月还款</td>
+                                <td class="td2 mark"><em id="_debj_syhk">0</em> 元<br><span>每月递减：</span><b id="_debj_mydj">0</b> 元</td>
+                            </tr>
+                            <tr>
+                                <td class="td1">总支付利息</td>
+                                <td class="td2"><em id="_debj_zflx">0</em> 元</td>
+                            </tr>
+                            <tr>
+                                <td class="td1">本息合计</td>
+                                <td class="td2"><em id="_debj_hkze">0</em> 元</td>
+                            </tr>
+                        </tbody>
+                    </table>            
+                </td>
+            </tr>
+        </tbody>
+    </table>
+<div class="result-info">此结果仅供参考</div>
+<!-- 弹窗区域 -->
+<!-- 贷款期限弹窗 -->
+<section class="frame-bottom" id="end-times">
+    <div class="lists">
+        
+    </div>
+</section>
+<!-- 首付弹窗 -->
+<section class="frame-bottom" id="payment">
+    <div class="lists">
+        
+    </div>
+</section>
+<!-- 年利率弹窗 -->
+<section class="frame-top" id="rate-frame">
+    <div class="rates">
+        
+    </div>
+</section>
+<script type="text/javascript" src="cal.js"></script>
+<script type="text/javascript" src="js/gongjijin.js"></script>

@@ -1,0 +1,29 @@
+.rateBoth{
+    width:100%;height:auto;margin:0 auto;display: none;
+}
+.rateBoth table{
+    width:100%;border: none;
+}
+th,td{
+    height: 9rem;font-size: 2.8rem;color: #aaa;text-align: center;line-height: 9rem;font-weight: normal;
+}
+.bolds{
+    color:#222;font-weight: bold;
+}
+tbody tr:nth-child(even),thead{
+    background: #fff;
+}
+.word{
+    height:auto;padding: 0 3rem;font-size: 2.4rem;color: #222;text-align: center;margin-top:6rem;line-height: 2.6rem;
+
+}
+.word div{
+    margin-top:3rem;
+}
+.table_show{
+    display: block;
+}
+.rate{
+    position: relative;
+    z-index: -1;
+}

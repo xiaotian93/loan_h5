@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>房贷计算器</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,minimum-scale=0.5,maximum-scale=0.5,user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="jquery.js"></script>
+	<script src="http://sdk.talkingdata.com/app/h5/v1?appid=06266C5B3EA34B40A4DB14BF39184B38"></script>
+</head>
+<body>
+	<section>
+		<div class="icons">
+			<a href="router.html" class="icon fangdai">
+				<img src="icon/home-loan.png">
+				<span>房贷计算</span>
+			</a>
+			<a href="loan_rate.html" class="icon rate">
+				<img src="icon/rate.png">
+				<span>贷款利率查询</span>
+			</a>
+			<a href="chedai.html" class="icon mid chedai">
+				<img src="icon/car-loan.png">
+				<span>车贷计算</span>
+			</a>
+		</div>	
+	</section>
+	<script>
+		$(".fangdai").click(function(){
+			TDAPP.onEvent("点击房贷计算");
+		});
+		$(".rate").click(function(){
+			TDAPP.onEvent("点击贷款利率查询");
+		});
+		$(".chedai").click(function(){
+			TDAPP.onEvent("点击车贷计算");
+		});
+	</script>
+</body>
+</html>

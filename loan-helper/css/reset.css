@@ -1,0 +1,128 @@
+/*
+KISSY CSS Reset
+理念：清除和重置是紧密不可分的
+特色：1.适应中文 2.基于最新主流浏览器
+维护：玉伯(lifesinger@gmail.com), 正淳(ragecarrier@gmail.com)
+*/
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow: auto; font-size: 62.5%; }
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 1.2rem/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+h1 { font-size: 1.8rem; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.4rem; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 1.2rem; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none;color:inherit }
+a:hover { text-decoration: none;  }
+a:hover,a:active,a:visited { text-decoration: none; color:inherit  }
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+img{vertical-align: middle;}
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+body{
+  background-color: #fff;
+}
+.bar{
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  color: #a0c5fa;
+  padding: 0px 66px;
+  font-size: 28px;
+  background: #1b84ff;
+  background: -moz-linear-gradient(left,  #1b84ff 0%, #18a0ff 100%);
+  background: -webkit-gradient(linear, left left, left right, color-stop(0%,#1b84ff),color-stop(100%,#18a0ff));
+  background: -webkit-linear-gradient(left,  #1b84ff 0%,#18a0ff 100%);
+  background: -o-linear-gradient(left,  #1b84ff 0%,#18a0ff 100%);
+  background: -ms-linear-gradient(left,  #1b84ff 0%,#18a0ff 100%);
+  background: linear-gradient(to right,  #1b84ff 0%,#18a0ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b84ff', endColorstr='#18a0ff',GradientType=0 );
+  height: 108px;
+  box-shadow: 0px 0px 20px -1px #1b84ff;
+  position: relative;
+  z-index: 101;
+}
+.bar span,.bar span{
+  display: inline-block;
+  line-height: 100px;
+  padding: 0px 8px;
+  box-sizing: content-box;
+}
+
+.bar span.active,.bar span.active{
+  color: #fff;
+  border-bottom: 8px solid #fff;
+}
+input[type="radio"]{display: none}
+.radio{
+  background-image: url(../icon/radio-f.png);
+  background-size: contain;
+  display: inline-block;
+  width: 30px!important;
+  height: 30px!important;
+  position: relative;
+  top: 4px
+}
+input[type="radio"][data-value="checked"]+.radio{
+  background-image: url(../icon/radio-t.png);
+}
+input[type="number"]{
+  background-color: initial;
+}
+

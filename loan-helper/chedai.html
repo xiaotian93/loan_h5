@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,minimum-scale=0.5,maximum-scale=0.5,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/fangdai.css">
+    <script type="text/javascript">
+	if(!window['RCal']){
+		window['RCal'] = { };
+	}
+				RCal.baseRate = [{"term":[0,12],"rate":4.35,"text":"1\u5e74\u4ee5\u5185(\u542b1\u5e74)"},{"term":[12,60],"rate":4.75,"text":"1\u5e74\u52305\u5e74(\u542b5\u5e74)"},{"term":[60,1000],"rate":4.9,"text":"5\u5e74\u4ee5\u4e0a"}];
+	RCal.baseRateGjj = [{"term":[0,60],"rate":2.75,"text":"5\u5e74\u4ee5\u5185(\u542b5\u5e74)"},{"term":[60,1000],"rate":3.25,"text":"5\u5e74\u4ee5\u4e0a"}];
+	RCal.baseRateCunkuan = [{"term":0,"rate":0.35,"text":"\u6d3b\u671f"},{"term":3,"rate":1.1,"text":"3\u4e2a\u6708\u5b9a\u671f"},{"term":6,"rate":1.3,"text":"6\u4e2a\u6708\u5b9a\u671f"},{"term":12,"rate":1.5,"text":"1\u5e74\u5b9a\u671f"},{"term":24,"rate":2.1,"text":"2\u5e74\u5b9a\u671f"},{"term":36,"rate":2.75,"text":"3\u5e74\u5b9a\u671f"}];
+</script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="calculator.js"></script>
+    <script type="text/javascript" src="Combox.js"></script>
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript" src="cal_chedai.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+    <script src="http://sdk.talkingdata.com/app/h5/v1?appid=06266C5B3EA34B40A4DB14BF39184B38"></script>
+    <title>车贷计算器</title>
+</head>
+<body>
+    <table class="forms">
+        <tbody>
+            <tr>
+                <td class="key">所在地</td>
+                <td class="value">
+                    <span id="citysel">
+                        <a href="###" id="_city">北京</a><span>&nbsp;&gt;</span>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="key">车价</td>
+                <td class="value">
+                	<div class="inpt-wrap">
+                		<input type="number" class="inpt" id="_gcjg">
+        				<span>元</span>
+        			</div>
+        		</td>
+            </tr>
+            <tr>
+                <td class="key">座位数</td>
+                <td  class="value" colspan="2">
+                    <input type="radio" name="_zw" id="zw1" value="1" checked="" data-value="checked">
+                     <label for="zw1" class="radio"></label>
+                     <label for="zw1">6座以下</label>
+                    <input type="radio" name="_zw" id="zw2" value="2">
+                     <label for="zw2" class="radio"></label>
+                     <label for="zw2" class="label3">6座及以上</label>
+                </td>
+            </tr>
+            <tr class="div2">
+                <td class="key">首付</td>
+                <td class="value">
+                    <div id="sfbl_sel" class="sel">
+                        <input type="hidden" name="sfbl" id="_combox_inp_sfbl_sel" value="2">
+                        <span class="view" id="_combox_inp_sfbl_sel_view">2</span>
+                        <span>成&gt;</span>
+                    </div>
+                </td>
+            </tr>
+            <tr class="div2">
+                <td class="key">贷款期限</td>
+                <td class="value">
+                    <div id="dkqx_sel" class="sel">
+                        <!-- <div class="yt-text" id="t1507862621028" style="height: 27px; line-height: 27px; width: 168px;">1年</div>
+                        <div panes="layer" id="dkqx_list" class="yt-list" style="top: 28px; left: 0px; width: 176px; display: none;">
+                            <div ivalue="6" style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">6个月</div>
+                            <div ivalue="12" class="list-div-hover" style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">1年</div>
+                            <div ivalue="24" style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">2年</div>
+                            <div ivalue="36" style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">3年</div>
+                            <div ivalue="48" style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">4年</div>
+                            <div ivalue="60" style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">5年</div>
+                        </div> -->
+                        <input type="hidden" name="dkqx" id="_combox_inp_dkqx_sel" value="12">
+                        <span class="view" id="_combox_inp_dkqx_sel_view">1</span>
+                        <span id="unit">年</span> &gt;
+                    </div>
+                </td>
+            </tr>
+            <tr class="div2">
+            	<td class="key">年利率</td>
+            	<td class="value" id="show-rate">
+            		<span id="dklv_view" class="view">4.35</span>
+                    <span>%</span><span> &nbsp;&gt;</span>
+            	</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="forms">
+        <tbody>
+            <tr class="div2">
+                <td class="key noborder">手动输入年利率</td>
+                <td class="value" id="show-rate">
+                    <input type="number" class="inpt" value="4.35" data-rate="1" id="dklv" />
+                    <span> %&nbsp;</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="value btn-td">
+                    <button class="btn cal-btn" did="2">开 始 计 算</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+<div class="title">
+    <section>
+        买房参考
+        <div></div>
+    </section>
+</div>
+<table id="result">
+    <tbody>
+        <tr>
+            <td class="result active">
+                <table cellpadding="0" cellspacing="0" class="tbl">
+                    <tbody>
+                        <tr>
+                            <td class="td1">基本税费:</td>
+                            <td class="td2"><var id="_byhf">0</var> 元</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">商业保险:</td>
+                            <td class="td2"><var id="_sybx">0</var> 元</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">还款月数</td>
+                            <td class="td2"><var id="_debx_dkqx">12</var> 月</td>
+                        </tr>
+                        <tr height="50">
+                            <td class="td1">购车总费用:</td>
+                            <td class="td2"><em id="_gczfy2">0</em> 元</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">首付:</td>
+                            <td class="td2"><em id="_dksf">0</em> 元</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">每月还款:</td>
+                            <td class="td2"><em id="_debx_myhk">0</em> 元</td>
+                        </tr>
+                    </tbody>
+                </table>            
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="result-info">此结果仅供参考</div>
+
+<div class="result_daikuanmaiche">
+    <ul class="pllist bottom-list">
+        <input type="hidden" class="inpt xg" id="_spfy">
+        <li><input type="radio" name="_pl" id="pl1" value="1"><label for="pl1">1.0L(含)以下</label></li>
+        <li><input type="radio" name="_pl" id="pl2" value="2" checked=""><label for="pl2">1.0-1.6L(含)</label></li>
+        <li><input type="radio" name="_pl" id="pl3" value="3"><label for="pl3">1.6-2.0L(含)</label></li>
+        <li><input type="radio" name="_pl" id="pl4" value="4"><label for="pl4">2.0-2.5L(含)</label></li>
+        <li><input type="radio" name="_pl" id="pl5" value="5"><label for="pl5">2.5-3.0L(含)</label></li>
+        <li><input type="radio" name="_pl" id="pl6" value="6"><label for="pl6">3.0-4.0L(含)</label></li>
+        <li><input type="radio" name="_pl" id="pl7" value="7"><label for="pl7">4.0L以上</label></li>
+    </ul>
+</div>
+<div class="result_daikuanmaiche">
+    <ul class="pflist bottom-list">
+        <input type="checkbox" name="chkbx" id="c_szx" class="xg" checked="">
+        <li><input type="radio" name="_szbe" value="5" class="xg" id="szbe1"><label for="szbe1">5万</label></li>
+        <li><input type="radio" name="_szbe" value="10" class="xg" id="szbe2" checked=""><label for="szbe2">10万</label></li>
+        <li><input type="radio" name="_szbe" value="15" class="xg" id="szbe3"><label for="szbe3">15万</label></li>
+        <li><input type="radio" name="_szbe" value="20" class="xg" id="szbe4"><label for="szbe4">20万</label></li>
+        <li><input type="radio" name="_szbe" value="30" class="xg" id="szbe5"><label for="szbe5">30万</label></li>
+        <li><input type="radio" name="_szbe" value="50" class="xg" id="szbe6"><label for="szbe6">50万</label></li>
+        <li><input type="radio" name="_szbe" value="100" class="xg" id="szbe7"><label for="szbe7">100万</label></li>
+    </ul>
+</div>
+<div class="result_daikuanmaiche">
+<div class="r_result">
+    <div class="r_body">
+        <table cellpadding="0" cellspacing="0" class="tbl gcbx_tb">
+            <tbody>
+            <tr>
+                <td><input type="checkbox" name="chkbx" id="c_jdcssx" class="xg" checked=""> <label for="c_jdcssx">车辆损失险</label><span class="help" id="clssxsm"></span>
+                </td>
+                <td>&nbsp;</td>
+                <td class="tdv"><input type="text" class="inpt" id="_jdcssx" readonly="" style="background: rgb(255, 255, 255);"> 元</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chkbx" id="c_jdcqdx" class="xg" checked=""> <label for="c_jdcqdx">全车强盗险</label><span class="help" id="jdcqdxsm"></span>
+                </td>
+                <td>&nbsp;</td>
+                <td class="tdv"><input type="text" class="inpt" id="_jdcqdx" readonly="" style="background: rgb(255, 255, 255);"> 元</td>
+            </tr> 
+            <tr>
+                <td><input type="checkbox" name="chkbx" id="c_bjmptyx" class="xg" checked=""> <label for="c_bjmptyx">不计免赔特约险</label><span class="help" id="bjmptyxsm"></span>
+                </td>
+                <td>&nbsp;</td>
+                <td class="tdv"><input type="text" class="inpt" id="_bjmptyx" readonly="" style="background: rgb(255, 255, 255);"> 元</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chkbx" id="c_wgzrx" class="xg" checked=""> <label for="c_wgzrx">无过责任险</label><span class="help" id="wgzrxsm"></span>
+                </td>
+                <td>&nbsp;</td>
+                <td class="tdv"><input type="text" class="inpt" id="_wgzrx" readonly="" style="background: rgb(136, 255, 197);"> 元</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chkbx" id="c_csryzrx" class="xg" checked=""> <label for="c_csryzrx">车上人员责任险</label><span class="help" id="csryzrxsm"></span>
+                </td>
+                <td>投保人数 <input type="text" id="_tbrs" class="inpt xg" style="width:30px" value="1"> 人</td>
+                <td class="tdv"><input type="text" class="inpt" id="_csryzrx" readonly="" style="background: rgb(255, 255, 255);"> 元</td>
+            </tr>
+            <tr>
+                <td class="lhtd"><input type="checkbox" name="chkbx" id="c_cshhx" class="xg" checked=""> <label for="c_cshhx">车身划痕险</label><span class="help" id="cshhxsm"></span>
+                </td>
+                <td class="lhtd" style="line-height:22px">
+                    赔付额度：<br>
+                    <input type="radio" name="_hhbe" value="2000" class="xg" id="hhbe1"><label for="hhbe1">2千</label>&nbsp;&nbsp;
+                    <input type="radio" name="_hhbe" value="5000" class="xg" id="hhbe2" checked=""><label for="hhbe2">5千</label>&nbsp;&nbsp;
+                    <input type="radio" name="_hhbe" value="10000" class="xg" id="hhbe3"><label for="hhbe3">1万</label>&nbsp;&nbsp;
+                    <input type="radio" name="_hhbe" value="20000" class="xg" id="hhbe4"><label for="hhbe4">2万</label>
+                </td>
+                <td class="tdv"><input type="text" class="inpt" id="_cshhx" readonly="" style="background: rgb(255, 255, 255);"> 元</td>
+            </tr>
+
+        </tbody></table>
+    </div>
+</div>
+</div>
+<!-- 城市弹窗 -->
+<section class="frame-city">
+    <section class="animated">
+        <div class="ctype">热门城市</div>
+        <div class="items" id="citys">
+
+        </div>
+        <div class="ctype">热门城市</div>
+        <div class="items" id="provinces">
+            
+        </div>
+    </section>
+</section>
+<!-- 贷款期限弹窗 -->
+<section class="frame-bottom" id="end-times">
+    <div class="lists">
+        
+    </div>
+</section>
+<!-- 首付弹窗 -->
+<section class="frame-bottom" id="payment">
+    <div class="lists">
+        
+    </div>
+</section>
+<!-- 年利率弹窗 -->
+<section class="frame-top" id="rate-frame">
+    <div class="rates">
+        
+    </div>
+</section>
+<script src="js/chedai.js"></script>
+
+</body>
+</html>
